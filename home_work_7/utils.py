@@ -1,5 +1,5 @@
 import json
-import random
+import math
 
 
 # подсчет общего количества вопросов
