@@ -1,4 +1,5 @@
 import json
+import flask
 
 
 # подсчет общего количества вопросов
