@@ -1,5 +1,5 @@
 import json
-import flask
+import django
 
 
 # подсчет общего количества вопросов
