@@ -1,5 +1,4 @@
 import json
-import django
 
 
 # подсчет общего количества вопросов
