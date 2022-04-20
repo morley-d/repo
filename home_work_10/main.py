@@ -1,4 +1,3 @@
-import json
 from utils import *
 
 from flask import Flask
@@ -15,9 +14,9 @@ def main():
 @app.route("/candidates/<int:candidate_id>")
 def candidate(candidate_id):
     candidates_list = get_candidates('candidates.json')
-    candidate = candidate_selection_by_id(candidates_list, candidate_id)
-    image = f'<img src="{candidate["picture"]}">'
-    return image + formatted_candidates([candidate])
+    selected_candidate = candidate_selection_by_id(candidates_list, candidate_id)
+    image = f'<img src="{selected_candidate["picture"]}">'
+    return image + formatted_candidates([selected_candidate])
 
 
 @app.route("/skills/<skill>")
@@ -27,4 +26,4 @@ def skills(skill):
     return formatted_candidates(selected)
 
 
-app.run()
+app.run(port=5005)
